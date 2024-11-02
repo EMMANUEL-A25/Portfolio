@@ -1,31 +1,66 @@
-# Portfolio
+# HTML/ CSS
 
-Your starting portfolio, to iterate on.
+## Forms, styling forms, and Devtools
 
-## Learning Objectives
+## Aims
 
-- Customise the starting portfolio with your professional details
-- Iterate on your portfolio every module
-- Review your colleague's portfolio
+- Interpret requirements
+- Write a valid form
+- Style form controls
+- Test with Devtools
+- Refactor using Devtools
 
-## Requirements
+## Task
 
-At Code Your Future, we expect everyone to graduate with a unique professional portfolio. Begin building this portfolio as soon as you begin our Software Development Course. At first, your portfolio will be a simple HTML/CSS page deployed to Github Pages or Netlify. This is your MVP.
+We are selling t-shirts. Write a form to collect the following data:
 
-Every module, you will _iterate_ on your portfolio, adding a new project and improving your design and presentation. By the time you apply to Final Projects, your portfolio will help you show you are ready to be accepted on to a Final Projects team.
+Our customers already have accounts, so we know their addresses and charging details already. We don't need to collect that data. We want to confirm they are the right person, then get them to choose a colour and then pick a delivery date.
 
-## Acceptance Criteria
+Writing that out as a series of questions to ask yourself:
 
-- [ ] My portfolio introduces me and my work
-- [ ] The design and code is my own, not a template or tutorial
-- [ ] Each project is linked to my code on Github and the deployed project
-- [ ] I have published my professional contact information on my portfolio
-- [ ] My Accessibility and SEO scores are 100 on Lighthouse
-- [ ] My portfolio is deployed
-- [ ] I have replaced this README with one that describes my own portfolio
+1. What is the customer's name? I must collect this data, and validate it. But what is a valid name? I must decide something.
+2. What is the customer's email? I must make sure the email is valid. Email addresses have a consistent pattern.
+3. What colour should this t-shirt be? I must give 3 options. How will I make sure they don't pick other colours?
+4. What size does the customer want? I must give the following 6 options: XS, S, M, L, XL, XXL
+5. When do they want the t-shirt to be delivered? I must collect a date and make sure that date is in the next four weeks. How will I do this? How will I make sure there are no mistakes about the date?
 
-## Resources
+All fields are required.
+Do not write a form action for this project.
 
-- [Josh Comeau on building your early career profile](https://www.youtube.com/watch?v=OXiaEXfkAec)
-- [How to Build an Effective Dev Portfolio](https://www.joshwcomeau.com/effective-portfolio/)
-- [CYF Graduate Module](https://module-graduates.codeyourfuture.io/)
+## Developers must test their work.
+
+Let's write out our testable criteria:
+
+- [ ] I have used HTML and CSS only.
+
+### HTML
+
+- [ ] My form is semantic html.
+- [ ] All inputs have associated labels.
+- [ ] My Lighthouse Accessibility score is 100.
+- [ ] I require a valid name. I have defined a valid name as a text string of two characters or more.
+- [ ] I require a valid email.
+- [ ] I require one colour from a defined set of 3 colours.
+- [ ] I require one size from a defined set of 6 sizes.
+- [ ] I require one date from a constrained date range.
+
+### CSS
+
+- [ ] I show which element is focused.
+- [ ] My Lighthouse Accessibility score is 100.
+
+## Extension Task
+
+If you have done all these things and you would like a really big challenge, run a further test and refactor your code.
+
+- In Chrome Devtools, open the Command Palette
+  https://developer.chrome.com/docs/devtools/command-menu/
+- Type 'coverage' and open the Coverage drawer
+  https://developer.chrome.com/docs/devtools/coverage/
+- Refactor your code until you have no unused CSS, or as close to that as you can get. Prettier will prevent you minifying your code so the last few bytes are out of your reach, sorry!
+- This challenge isn't about writing less CSS, it's about writing less _pointless_ CSS, so don't remove code that is actually being used in your layout.
+- Insider tip: you might have to select some elements so their focus states don't get miscounted as unused. You can force state in Devtools:
+  https://twitter.com/ChromeDevTools/status/986992837127319552
+- Take a screenshot of your coverage stats.
+
+Sanity check: this extension is tough! Try it in your own time and don't let it hold up your coursework submission.
