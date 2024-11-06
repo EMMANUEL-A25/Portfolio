@@ -1,28 +1,20 @@
-# Portfolio
+ I'm Emmanuel , a  code your future trainee currently enrolled in a sofware enginnering  course and I am particularly interested in  webdevelopemnt 
+**My Skills:**
+* **Programming Languages: HTML,CSS , Javascript
+* 
+*
 
-Your starting portfolio, to iterate on.
+**Featured Projects:**
+* **Form control Site
+* **Hometown page Website
+* 
 
-## Learning Objectives
+**Let's Connect!**
+* **Email:** [esiziba71@gmail.com]
+* **LinkedIn:** [https://www.linkedin.com/in/emmanuel-siziba-29464a1b7/]
+* **GitHub:** [https://github.com/EmmanuelSiziba]
 
-- Customise the starting portfolio with your professional details
-- Iterate on your portfolio every module
-- Review your colleague's portfolio
-
-## Requirements
-
-At Code Your Future, we expect everyone to graduate with a unique professional portfolio. Begin building this portfolio as soon as you begin our Software Development Course. At first, your portfolio will be a simple HTML/CSS page deployed to Github Pages or Netlify. This is your MVP.
-
-Every module, you will _iterate_ on your portfolio, adding a new project and improving your design and presentation. By the time you apply to Final Projects, your portfolio will help you show you are ready to be accepted on to a Final Projects team.
-
-## Acceptance Criteria
-
-- [ ] My portfolio introduces me and my work
-- [ ] The design and code is my own, not a template or tutorial
-- [ ] Each project is linked to my code on Github and the deployed project
-- [ ] I have published my professional contact information on my portfolio
-- [ ] My Accessibility and SEO scores are 100 on Lighthouse
-- [ ] My portfolio is deployed
-- [ ] I have replaced this README with one that describes my own portfolio
+Feel free to explore my projects or reach out for a chat!
 
 ## Resources
 
