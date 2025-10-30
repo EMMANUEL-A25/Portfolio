@@ -20,10 +20,49 @@
         </ul>
     </div>
     </nav>
-    <nav id="hamburger-nav">
+    
+    <!--mobile version view-->
+    <nav id="hamburger-nav" aria-label="Mobile Navigation Menu"> 
         <div class="logo">Emmanuel</div>
-        
-    </nav>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon"  role="button" aria-expanded ="false" onclick="toggleMenu()"></div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-links">
+            <ul class="nav-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+      </div> 
+      </nav>
+      
+        <section id="profile">
+            <div class="section__pic-container">
+                <img src="assets/profile-pic.png" alt="Emmanuel Profile Picture">
+            </div>
+
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p>
+                <h1 class="text">Emmanuel Siziba</h1>
+                <p class="section__text__p2">An aspiring Software Developer</p>
+
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')"> Download CV </button>
+                    <button class="btn btn-color-1" onclick="location.href='#contact'"> Contact Info </button>
+                </div>
+                
+                <div id="socials-container">
+                    <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/emmanuel-siziba-29464a1b7/'" />
+                    <img  src="./assets/github.png" alt="My GitHub Profile" class="icon" onclick="location.href='https://github.com/EMMANUEL-A25'" />
+                </div>
+            </div>  
+        </section>
     <script src="script.js"></script>
 </body>
 </html>
