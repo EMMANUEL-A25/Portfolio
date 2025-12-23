@@ -11,38 +11,63 @@
 <body>
   <!-- Desktop Navigation -->
   <nav id="desktop-nav">
-    <div class="logo">Emmanuel</div>
-    <div>
+       <div class="logo">Emmanuel</div>
+      <div>
       <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-  </nav>
-
-  <!-- Mobile Navigation -->
-  <nav id="hamburger-nav" aria-label="Mobile Navigation Menu">
-    <div class="logo">Emmanuel</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" role="button" aria-expanded="false" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
       </div>
-    </div>
+      <! --Social buttons -->
+      <div class="nav-socials">
+        <!linkdin -->
+        <a href="https://www.linkedin.com/in/emmanuel-siziba-29464a1b7/"  class="social-btn linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
 
-    <div class="menu-links">
-      <ul class="nav-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </ul>
-    </div>
+        <!-- GitHub -->
+          <a href="https://www.linkedin.com/in/emmanuel-siziba-29464a1b7/"  class="social-btn github">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <!-- xtwitter -->
+          <a href="https://www.linkedin.com/in/emmanuel-siziba-29464a1b7/"  class="social-btn x">
+           <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <!-- facebook -->
+          <a href="https://www.linkedin.com/in/emmanuel-siziba-29464a1b7/"  class="social-btn facebook">
+           <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- youtube -->
+          <a href="https://www.linkedin.com/in/emmanuel-siziba-29464a1b7/"  class="social-btn youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+      </div>
   </nav>
-
+       <!-- Mobile menu/toggle menu -->
+  <nav id="hamburger-nav">
+      <div class="logo">Emmanuel</div>
+       <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+         <span></span>
+         <span></span>
+         <span></span>
+         </div>
+         <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+         </div>
+       </div>
+  </nav>
+     
   <!-- Profile Section -->
   <section id="profile">
     <div class="section__pic-container">
@@ -280,7 +305,7 @@
          <p><a  href="https://mail.google.com/mail/u/0/#inbox">esiziba71@gmail.com</a></p>
         </div>
                 <!-- linkdin -->
-        <div class="contact-info-contact">
+        <div class="contact-info-container">
          <img src="./assets/linkedin.png" alt="LinkedIn Icon" class="icon contact-icon" />
          <p><a  href="https://www.linkedin.com/in/emmanuel-siziba-29464a1b7/'">LinkedIn</a></p>
 
