@@ -9,22 +9,22 @@
   <meta name="description" content="Emmanuel Siziba- Code Your Future Trainee & Aspiring Software Developer, responsive web portfolio with projects, blog, skills and contact">
   <meta name="keywords" content="Emmanuel Siziba, portfilo, software dev, fullstack developer, HTML, CSS, Javascript">
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
-  <scrip defer src="script.js"></script><!-- defer ensures Javascript runs after html is loaded -->
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 <header>
   <!--Navbar-->
   <div class="container nav">
-    <a class="brand" href="home">
+
+    <a class="brand" href="#home">
       <div class="logo">EA</div>
       <strong>Emmanuel</strong>
     </a>
 
     <nav class="navlinks" id="navlinks">
-      <a href="about">About</a>
+      <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#blog">Blog</a>
@@ -33,13 +33,38 @@
       <button class="btn" id="themeToggle" aria-label="Toggle theme">
         🌗 Theme
       </button>
+    </nav>
 
-       <button class="btn" id="themeToggle" aria-label="Toggle theme">
+       <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
         ☰
       </button>
-    </nav>
   </div>
 </header>
+
+<!--Hero-->
+<section class="hero container" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow reveal"><span class="glow-dot"></span>Available For Full-Time Roles</div>
+      <h1 class="reveal" style="transition-delay: 06s">Hi, I'm Emmanuel -
+       <span 
+        style="background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">
+       An Aspiring Software Developer</span> & A Code Your Future Trainee </h1>
+       <p class="lead reveal" style="transition-delay: 1.2s;">Aspiring Software Developer building practical web applications through hands-on projects, team collaborations, mentorship, and regular demo presentations at Code Your Future.
+      </p>
+      <div class="cta reveal" style="transition-delay:.18s">
+        <a class="btn primary" href="/Emmanuel-JR-DEV-CV">Download CV</a>
+        <a class="btn" href="#projects">🚀 See Projects</a>
+      </div>
+    </div>
+    <div class="avatar-card reveal" style="transition-delay:.2s">
+        <img class="avatar"
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop"
+          alt="Emmanuel Siziba placeholder" />
+        <div class="rings" aria-hidden="true"></div>
+      </div>
+  </div>
+</section>
 
 </body>
 </html>

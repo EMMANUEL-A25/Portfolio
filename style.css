@@ -1,3 +1,4 @@
+    
 :root {
       --bg: #0b0d11;
       --text: #e8eef9;
@@ -28,7 +29,7 @@
     * {
       box-sizing: border-box
     }
-
+ 
     html,
     body {
       padding: 0;
@@ -149,6 +150,121 @@
         opacity: 1;
         pointer-events: auto
       }
-    
+    }
 
-    
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 96px 0 72px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--glass);
+      font-size: 14px;
+    }
+
+    .glow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent-2);
+      box-shadow: 0 0 18px var(--accent-2);
+    }
+
+    h1 {
+      font-size: clamp(34px, 4.5vw, 64px);
+      line-height: 1.05;
+      margin: 12px 0 8px;
+    }
+
+    .lead {
+      font-size: clamp(16px, 1.25vw, 20px);
+      opacity: .92;
+      margin-bottom: 24px;
+    }
+
+    .cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-color: transparent;
+      color: white;
+      box-shadow: 0 10px 25px rgba(124, 92, 255, .35);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Floating avatar card */
+    .avatar-card {
+      position: relative;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .avatar {
+      border-radius: 16px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.05);
+    }
+
+    .rings {
+      position: absolute;
+      inset: -40% -25% -25% -40%;
+      z-index: -1;
+      opacity: .6;
+    }
+
+    .rings::before,
+    .rings::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 50%, rgba(124, 92, 255, .25), transparent 50%),
+        radial-gradient(circle at 60% 40%, rgba(0, 224, 209, .25), transparent 55%);
+      filter: blur(40px);
+      animation: float 8s ease-in-out infinite alternate;
+      opacity: .9;
+    }
+
+    @keyframes float {
+      to {
+        transform: translateY(10px) scale(1.03) rotate(1deg);
+      }
+    }
