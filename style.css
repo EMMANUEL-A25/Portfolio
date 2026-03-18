@@ -1,14 +1,23 @@
     
 :root {
-      --bg: #0b0d11;
-      --text: #e8eef9;
-      --muted: #b7c0d8;
-      --accent: #7c5cff;
-      --accent-2: #00e0d1;
-      --card: #121621;
-      --glass: rgba(255, 255, 255, .06);
-      --border: rgba(255, 255, 255, .12);
-      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+      /* Brand colors*/
+      --accent: #08887e;
+      --accent-2: #333333;
+
+      /*Neutral Surface colors */
+      --bg: #f7f7f7;
+      --card: #ffffff;
+      --border: #dddddd;
+
+      /*Typography */
+      --text: #151515;
+      --muted: #666666;
+
+      /* Overlays
+      --glass: #ffffff66;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+
+      /*layout Constants */
       --radius: 20px;
     }
 
