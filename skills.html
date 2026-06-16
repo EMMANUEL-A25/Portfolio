@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Skills | Emmanuel</title>
 
-    <!-- SEO -->
     <meta name="description" content="Browse Alex Rivera's portfolio of development and design projects, including web applications, UI redesigns, and open-source contributions." />
     <meta name="author" content="Alex Rivera" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://your-username.github.io/portfolio/projects.html" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Projects | Alex Rivera" />
     <meta property="og:description" content="Browse Alex Rivera's portfolio of development and design projects, including web applications, UI redesigns, and open-source contributions." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://your-username.github.io/portfolio/projects.html" />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/skillls.css" />
   </head>
+
   <body>
     <nav class="navbar" id="navbar">
       <div class="nav-container">
@@ -42,9 +40,7 @@
         <div class="nav-controls">
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
             <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18.75a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM6.166 18.894a.75.75 0 0 1-1.06-1.06l1.59-1.591a.75.75 0 1 1 1.061 1.06l-1.59 1.591ZM2.25 12a.75.75 0 0 1 .75-.75H5.25a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75ZM6.166 6.166a.75.75 0 0 1 1.06-1.06l1.59 1.591+a.75.75 0 1 1-1.061 1.06l-1.59-1.591Z"
-              />
+              <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18.75a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM6.166 18.894a.75.75 0 0 1-1.06-1.06l1.59-1.591a.75.75 0 1 1 1.061 1.06l-1.59 1.591ZM2.25 12a.75.75 0 0 1 .75-.75H5.25a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75ZM6.166 6.166a.75.75 0 0 1 1.06-1.06l1.59 1.591a.75.75 0 1 1-1.061 1.06l-1.59-1.591Z" />
             </svg>
           </button>
 
@@ -56,21 +52,174 @@
         </div>
       </div>
     </nav>
-      <body>
-        <section id="skills">
-          
-        </section>
-      </body>
 
+    <!-- FIX 1: removed duplicate <body> tag -->
+    <section id="skills">
+      <p class="section-subtitle">
+        Technologies and tools I work with real experience
+      </p>
+
+      <!-- FIX 2: fixed filterSkills() call syntax — removed stray spaces, fixed quotes and commas -->
+      <div class="skill-filters">
+        <button class="filter-btn active" onclick="filterSkills('all', this)">All</button>
+        <button class="filter-btn" onclick="filterSkills('frontend', this)">Frontend</button>
+        <button class="filter-btn" onclick="filterSkills('backend', this)">Backend</button>
+        <button class="filter-btn" onclick="filterSkills('tools', this)">Dev Tools</button>
+        <button class="filter-btn" onclick="filterSkills('professional', this)">Professional</button>
+      </div>
+
+      <!-- Skills grid -->
+      <div class="skills-grid" id="skillsGrid">
+
+        <!-- CARD 1 — Frontend -->
+        <div class="skill-card" data-cat="frontend" data-width="80">
+          <span class="skill-badge badge-frontend">Frontend</span>
+          <h3>HTML &amp; CSS</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-1"></div>
+          </div>
+          <p class="skill-level">Intermediate &middot; FreeCodeCamp certified</p>
+        </div>
+
+        <!-- CARD 2 — Frontend -->
+        <div class="skill-card" data-cat="frontend" data-width="65">
+          <span class="skill-badge badge-frontend">Frontend</span>
+          <h3>Javascript</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-2"></div>
+          </div>
+          <p class="skill-level">Intermediate &middot; CodeYourFuture</p>
+        </div>
+
+        <!-- CARD 3 — Frontend -->
+        <div class="skill-card" data-cat="frontend" data-width="75">
+          <span class="skill-badge badge-frontend">Frontend</span>
+          <h3>Responsive Web Design</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-3"></div>
+          </div>
+          <p class="skill-level">Intermediate &middot; FreeCodeCamp Certified</p>
+        </div>
+
+        <!-- FIX 3: Cards 4–6 corrected to data-cat="backend" and badge-backend -->
+
+        <!-- CARD 4 — Backend -->
+        <div class="skill-card" data-cat="backend" data-width="65">
+          <span class="skill-badge badge-backend">Backend</span>
+          <h3>Python</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-4"></div>
+          </div>
+          <p class="skill-level">Beginner &middot; Angela Yu — 100 Days of Code</p>
+        </div>
+
+        <!-- CARD 5 — Backend -->
+        <div class="skill-card" data-cat="backend" data-width="65">
+          <span class="skill-badge badge-backend">Backend</span>
+          <h3>SQL &amp; Data</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-5"></div>
+          </div>
+          <p class="skill-level">Beginner &middot; CodeYourFuture</p>
+        </div>
+
+        <!-- CARD 6 — Backend -->
+        <div class="skill-card" data-cat="backend" data-width="65">
+          <span class="skill-badge badge-backend">Backend</span>
+          <h3>APIs &amp; Data Processing</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-6"></div>
+          </div>
+          <p class="skill-level">Beginner &middot; IT varsity Full Stack certificate</p>
+        </div>
+
+        <!-- FIX 4: Cards 7–9 corrected to data-cat="tools" and badge-tools -->
+
+        <!-- CARD 7 — Dev Tools -->
+        <div class="skill-card" data-cat="tools" data-width="65">
+          <span class="skill-badge badge-tools">Dev Tools</span>
+          <h3>Git &amp; GitHub</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-7"></div>
+          </div>
+          <p class="skill-level">Intermediate &middot; PR workflow, code review</p>
+        </div>
+
+        <!-- CARD 8 — Dev Tools -->
+        <div class="skill-card" data-cat="tools" data-width="65">
+          <span class="skill-badge badge-tools">Dev Tools</span>
+          <h3>Kanban &amp; Agile</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-8"></div>
+          </div>
+          <p class="skill-level">Intermediate &middot; Used in real projects</p>
+        </div>
+
+        <!-- CARD 9 — Dev Tools -->
+        <div class="skill-card" data-cat="tools" data-width="65">
+          <span class="skill-badge badge-tools">Dev Tools</span>
+          <h3>Unit Testing &amp; TDD</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-9"></div>
+          </div>
+          <p class="skill-level">Beginner &middot; CodeYourFuture</p>
+        </div>
+
+        <!-- CARD 10 — Professional -->
+        <div class="skill-card" data-cat="professional" data-width="85">
+          <span class="skill-badge badge-professional">Professional</span>
+          <h3>Payroll &amp; Finance</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-10"></div>
+          </div>
+          <p class="skill-level">Advanced &middot; 2+ years experience</p>
+        </div>
+
+        <!-- CARD 11 — Professional -->
+        <div class="skill-card" data-cat="professional" data-width="75">
+          <span class="skill-badge badge-professional">Professional</span>
+          <h3>Digital Marketing</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-11"></div>
+          </div>
+          <p class="skill-level">Intermediate &middot; Degree qualified</p>
+        </div>
+
+        <!-- CARD 12 — Professional -->
+        <div class="skill-card" data-cat="professional" data-width="80">
+          <span class="skill-badge badge-professional">Professional</span>
+          <h3>Team Collaboration</h3>
+          <div class="skill-bar">
+            <div class="skill-fill" id="fill-12"></div>
+          </div>
+          <p class="skill-level">Advanced &middot; Pair programming &amp; workplace</p>
+        </div>
+
+      </div>
+      <!-- FIX 5: soft-skills-section moved OUTSIDE skills-grid, still inside #skills -->
+
+      <div class="soft-skills-section">
+        <h3>Workplace strengths</h3>
+        <div class="soft-skills-row">
+          <span class="soft-pill">Attention to detail</span>
+          <span class="soft-pill">Problem solving</span>
+          <span class="soft-pill">Time management</span>
+          <span class="soft-pill">Professional communication</span>
+          <span class="soft-pill">Self-directed learning</span>
+          <span class="soft-pill">Debugging mindset</span>
+          <span class="soft-pill">Code review</span>
+          <span class="soft-pill">Pair programming</span>
+        </div>
+      </div>
+
+    </section>
 
     <footer>
       <div class="footer-left">&copy; <span id="year">2026</span> Alex Rivera. All rights reserved.</div>
       <div class="socials">
         <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-            />
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
           </svg>
         </a>
         <a href="https://www.linkedin.com/in/your-username/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -81,14 +230,13 @@
         </a>
         <a href="https://instagram.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
-            />
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
           </svg>
         </a>
       </div>
     </footer>
 
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/skills.js"></script>
   </body>
 </html>
